@@ -14,5 +14,5 @@
         'views/product_product_view.xml',
         'views/res_config_settings_views.xml',
     ],
-    'installable': False,
+    'installable': True,
 }

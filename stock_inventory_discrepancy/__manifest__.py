@@ -19,6 +19,6 @@
         'security/stock_inventory_discrepancy_security.xml',
     ],
     "license": "AGPL-3",
-    'installable': True,
+    'installable': False,
     'application': False,
 }

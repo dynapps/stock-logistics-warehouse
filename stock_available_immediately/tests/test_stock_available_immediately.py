@@ -71,20 +71,20 @@ the variations in stock, both on product and template"""
         compare_product_usable_qty(productA, 0)
         compare_product_usable_qty(templateAB, 0)
 
-        stockMoveInA.action_confirm()
+        stockMoveInA._action_confirm()
         compare_product_usable_qty(productA, 0)
         compare_product_usable_qty(templateAB, 0)
 
-        stockMoveInA.action_assign()
+        stockMoveInA._action_assign()
         compare_product_usable_qty(productA, 0)
         compare_product_usable_qty(templateAB, 0)
 
-        stockMoveInA.action_done()
+        stockMoveInA._action_done()
         compare_product_usable_qty(productA, 2)
         compare_product_usable_qty(templateAB, 2)
 
         # will directly trigger action_done on productB
-        stockMoveInB.action_done()
+        stockMoveInB._action_done()
         compare_product_usable_qty(productA, 2)
         compare_product_usable_qty(productB, 3)
         compare_product_usable_qty(templateAB, 5)
@@ -100,7 +100,7 @@ the variations in stock, both on product and template"""
              'state': 'confirmed',
              })
 
-        stockMoveOutA.action_done()
+        stockMoveOutA._action_done()
         compare_product_usable_qty(productA, 1)
         compare_product_usable_qty(templateAB, 4)
 
